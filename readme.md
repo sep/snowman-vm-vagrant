@@ -20,6 +20,7 @@ Here are the cmd commands for Windows: (untested)
   
 
 (restart cmd)
+
 	git clone git@github.com:sep/snowman-vm-cookbook.git
 	cd snowman-vm-cookbook
 	vagrant plugin install vagrant-winrm 
