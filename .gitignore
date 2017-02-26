@@ -1,0 +1,4 @@
+.vagrant/*
+*.zip
+cookbooks/**
+Berksfile.lock
