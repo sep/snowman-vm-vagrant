@@ -1,8 +1,9 @@
 Snowman VM Vagrant 
 
 SetUp 
-1. Download and install Chocolately 
-1. Install VirtualBox 
+
+1. Download and install Chocolately
+1. Install VirtualBox
 1. Install Vagrant
 1. Install ChefDk
 1. Install Vagrant-WinRM plugin
