@@ -4,7 +4,7 @@
 Vagrant.require_version ">= 1.6.2"
 
 Vagrant.configure("2") do |config|
-    config.vm.define "snowman_vm"
+    config.vm.define "Snowman-VM"
     config.vm.box = "OC_Win10"
     config.vm.communicator = "winrm"
 
@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.provider :virtualbox do |v, override|
         #v.gui = true
-        v.customize ["modifyvm", :id, "--memory", 2048]
+        v.customize ["modifyvm", :id, "--memory", 4096]
         v.customize ["modifyvm", :id, "--cpus", 2]
         v.customize ["setextradata", "global", "GUI/SuppressMessages", "all" ]
     end
