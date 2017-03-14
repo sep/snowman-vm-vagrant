@@ -4,8 +4,8 @@
 Vagrant.require_version ">= 1.6.2"
 
 Vagrant.configure("2") do |config|
-    config.vm.define "vagrant-windows-10-pro"
-    config.vm.box = "win10"
+    config.vm.define "snowman_vm"
+    config.vm.box = "OC_Win10"
     config.vm.communicator = "winrm"
 
     # Admin user name and password

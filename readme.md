@@ -26,7 +26,7 @@ Here are the cmd commands for Windows: (untested)
 	cd snowman-vm-cookbook
 	vagrant plugin install vagrant-winrm 
 	vagrant plugin install vagrant-berkshelf
-	vagrant box add "file:////fs2/Virtual Machines/Vagrant-Boxes/windows_10_virtualbox_v1.0.0.box" --name win10
+	vagrant box add "file:////fs2/Virtual Machines/Vagrant-Boxes/OpsCenter/OC_windows_10_virtualbox_0.2.0.box" --name OC_Win10
 	berks vendor "./cookbooks"
 	
 	vagrant up
