@@ -24,8 +24,9 @@ Here are the cmd commands for Windows: (untested)
 
 	git clone git@github.com:sep/snowman-vm-cookbook.git
 	cd snowman-vm-cookbook
+	mkdir C:\Shared
 	vagrant plugin install vagrant-winrm 
-	vagrant plugin install vagrant-berkshelf
+	vagrant plugin install vagrant-berkshelf	
 	vagrant box add "file:////fs2/Virtual Machines/Vagrant-Boxes/OpsCenter/OC_windows_10_virtualbox_0.2.0.box" --name OC_Win10
 	berks vendor "./cookbooks"
 	
