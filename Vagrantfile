@@ -14,6 +14,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.guest = :windows
     config.windows.halt_timeout = 15
+    #config.vm.hostname = "BobsVM"
     config.vm.synced_folder "C:/Shared", "C:/Shared"
     config.vm.synced_folder ".", "/vagrant", disabled: true
 
@@ -23,10 +24,10 @@ Vagrant.configure("2") do |config|
     config.vm.provider :virtualbox do |v, override|
         #v.gui = true
         v.customize ["modifyvm", :id, "--memory", 4096]
-        v.customize ["modifyvm", :id, "--cpus", 2]
+        v.customize ["modifyvm", :id, "--cpus", 4]
         v.customize ["setextradata", "global", "GUI/SuppressMessages", "all" ]
     end
-	
+
 	config.vm.provision "chef_solo" do |chef|
 		chef.add_recipe "snowman-vm-cookbook"
 	end
