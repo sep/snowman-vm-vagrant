@@ -1,4 +1,6 @@
-Snowman VM Vagrant 
+Snowman VM Vagrant
+
+Please be sure to sign up for a Chef Enterprise account using [these instructions](https://sepedia.net.sep.com/wiki/Hosted_Chef_Server#Getting_Connected_to_SEP_Chef_Server).
 
 SetUp 
 
@@ -22,13 +24,16 @@ Here are the cmd commands for Windows: (untested)
 
 (restart cmd)
 
-	git clone git@github.com:sep/snowman-vm-cookbook.git
-	cd snowman-vm-cookbook
+	git clone git@github.com:sep/snowman-vm-vagrant.git
+	cd snowman-vm-vagrant
 	mkdir C:\Shared
 	vagrant plugin install vagrant-winrm 
 	vagrant plugin install vagrant-berkshelf	
-	vagrant box add "file:////fs2/Virtual Machines/Vagrant-Boxes/OpsCenter/OC_windows_10_virtualbox_0.2.0.box" --name OC_Win10
+	vagrant box add --name OC_Win10 "file:////fs2/Virtual Machines/Vagrant-Boxes/OpsCenter/OC_windows_10_virtualbox_0.3.0.box"
 	berks vendor "./cookbooks"
 	
 	vagrant up
-	vagrant rdp
+
+	# if "vagrant up" freaks out, try "vagrant up --provision"
+
+	vagrant rdp # or just, like, double-click the running instance in virtualbox
