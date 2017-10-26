@@ -4,6 +4,7 @@ Please be sure to sign up for a Chef Enterprise account using [these instruction
 
 SetUp 
 
+1. Make sure you have VPN and Rally access. Ask the scrum master.
 1. Download and install Chocolately
 1. Install VirtualBox
 1. Install Vagrant
@@ -18,7 +19,10 @@ Here are the cmd commands for Windows: (untested)
 (restart cmd)
 
 	choco install virtualbox
-	choco install vagrant 
+	choco install vagrant
+
+If Vagrant downloads version 2.0 or higher, uninstall it and reinstall version 1.9.6 from here: https://releases.hashicorp.com/vagrant/1.9.6/. Check the version with `vagrant -v`.
+
 	choco install chefdk
   
 
@@ -37,3 +41,9 @@ Here are the cmd commands for Windows: (untested)
 	# if "vagrant up" freaks out, try "vagrant up --provision"
 
 	vagrant rdp # or just, like, double-click the running instance in virtualbox
+
+Before booting the VM, change a few settings in virtualbox.
+1. Open virtualbox and click Settings.
+1. In the general tab, under Advanced, enable Shared Bidirectional Clipboard.
+1. In the display tab, under Screen, increase video memory to 128 MB.
+1. If your computer has a SSD, you can enable virtualbox to simulate one.
