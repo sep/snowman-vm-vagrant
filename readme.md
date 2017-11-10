@@ -29,6 +29,9 @@ If Vagrant downloads version 2.0 or higher, uninstall it and reinstall version 1
 (restart cmd)
 
 	choco install git
+	
+(restart cmd)
+	
 	git clone git@github.com:sep/snowman-vm-vagrant.git
 	cd snowman-vm-vagrant
 	mkdir C:\Shared
