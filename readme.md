@@ -24,19 +24,24 @@ Here are the cmd commands for Windows: (untested)
 If Vagrant downloads version 2.0 or higher, uninstall it and reinstall version 1.9.6 from here: https://releases.hashicorp.com/vagrant/1.9.6/. Check the version with `vagrant -v`.
 
 	choco install chefdk
-  
 
 (restart cmd)
 
 	choco install git
 	
-(restart cmd)
+(open git bash)
+
+Follow the instructions at: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 	
 	git clone git@github.com:sep/snowman-vm-vagrant.git
 	cd snowman-vm-vagrant
-	mkdir C:\Shared
+	mkdir C:\\Shared
 	vagrant plugin install vagrant-winrm 
-	vagrant plugin install vagrant-berkshelf	
+	
+	vagrant plugin install vagrant-berkshelf
+		OR
+	chef gem install berkshelf
+	
 	vagrant box add --name OC_Win10 "file:////fs2/Virtual Machines/Vagrant-Boxes/OpsCenter/OC_windows_10_virtualbox_0.3.0.box"
 	berks vendor "./cookbooks"
 	
