@@ -43,7 +43,12 @@ Follow the instructions at: https://help.github.com/articles/generating-a-new-ss
 	chef gem install berkshelf
 	
 	vagrant box add --name OC_Win10 "file:////fs2/Virtual Machines/Vagrant-Boxes/OpsCenter/OC_windows_10_virtualbox_0.3.0.box"
+	
+While your download is going, type in the Windows Search Box for "features" and open up Windows Features. Press the check box for Hyper-V and press OK.
+
 	berks vendor "./cookbooks"
+	
+Restart your computer after turning on Hyper-V and before starting your VM
 	
 	vagrant up
 
