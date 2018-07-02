@@ -31,14 +31,20 @@ Snowman VM Vagrant
 				2. Click Advaned System Settings.
 				3. Click Environment Variables
 				4. Under "User variables for <username>", click New.
-				5. Add an environment variable name HOME who value is the path to your Windows home directory.				
-	9. Open VirtualBox and click Settings.
+				5. Add an environment variable name HOME who value is the path to your Windows home directory.
+			* If one of the cookbooks fails to install, specifically IntelliJ (Idea) or Fiddler, you can either skip these or update the Vagrantfile to use new versions. Talk to Mike, Chris, or Bob Nowadly
+	9. Open VirtualBox. Shut down the VM and click 'Settings'.
 		1. In the General tab, under Advanced, enable Shared Bidirectional Clipboard.
 		2. In the Display tab, under Screen, increase video memory to 128 MB.
 		3. You may want to increase the virtual machine's RAM (don't recommmend more than half of the host machine's total RAM).
 		3. If your computer has a SSD, you can enable virtualbox to simulate one.
 		4. At this point, you may want to restart the virtual machine so these settings take effect.
 			* In Git Bash, do "vagrant halt" followed by "vagrant up"
+		5. Open up `cmd` on the host machine and issue the following commands to expand the size of the disk (you will have to be in the `C:\Program Files\Oracle\virtualbox` directory):
+		        * `VBoxManage clonehd "wherever-the-source-vmdk.vmdk" "C:\Shared\drive.vdi" --format vdi`
+			* `VBoxManage modifyhd "C:\Shared\drive.vdi" --resize 131072`
+			* `VBoxManage clonehd "C:\Shared\drive.vdi" "wherever-the-source-vmdk-2.vmdk" --format vmdk`
+		6. Under Virtualbox's Settings -> Storage -> Storage Devices you can set C: to the newly created, expanded vmdk. Do that, verify it works, then delete the old, small one (as well as `C:\Shared\drive.vdi`)
 	10. Open the virtual machine for use by double-clicking the running instance in VirtualBox.
 		* You can also do "vagrant rdp" from Git Bash.
 5. Make sure you have VPN and Rally access. Ask the scrum master.
