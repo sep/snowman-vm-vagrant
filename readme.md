@@ -18,7 +18,7 @@ Snowman VM Vagrant
 	5. Install the required vagrant plugins
 		* vagrant plugin install vagrant-winrm
 		* vagrant plugin install vagrant-berkshelf
-			* If the vagrant-berkshelf install doesn't work, try "chef gem install berkshelf" instead.
+			* If the vagrant-berkshelf install doesn't work, try "chef gem install berkshelf -v 6.3.2" instead.
 	6. Get the virtual machine image
 		* vagrant box add --name OC_Win10 "file:////fs2/Virtual Machines/Vagrant-Boxes/OpsCenter/OC_windows_10_virtualbox_0.3.0.box"
 	7. Acquire the cookbooks needed for provisioning the virtual machine
